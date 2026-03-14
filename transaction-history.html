@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Transaction History - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <div class="user-info" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="page-header">
+                <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+                <h1>Transaction History</h1>
+                <p>Account: Business Checking ****4521</p>
+                
+                <!-- Balance Display -->
+                <div class="account-balances-header">
+                    <div class="balance-box">
+                        <span class="balance-label-header">Ledger Balance</span>
+                        <span class="balance-amount-header" id="ledgerBalance">$293,715.18</span>
+                    </div>
+                    <div class="balance-box available">
+                        <span class="balance-label-header">Available Balance</span>
+                        <span class="balance-amount-header available" id="availableBalance">$4,715.18</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label for="dateFilter">Date Range</label>
+                    <select id="dateFilter">
+                        <option value="all">All Transactions</option>
+                        <option value="march">March 2026</option>
+                        <option value="february">February 2026</option>
+                        <option value="january">January 2026</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="alert('This is a local prototype – download simulated only')">Download CSV</button>
+            </div>
+
+            <div class="transaction-table-container">
+                <table class="transaction-table" id="transactionTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionBody">
+                        <!-- March 12, 2026 - Wire transfer payment from Outlandish Endeavors Professional LLC - $238,000 - PENDING -->
+                        <tr class="transaction-row" data-date="2026-03-12" data-status="pending">
+                            <td>Mar 12, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Outlandish Endeavors Professional LLC</span>
+                            </td>
+                            <td class="positive pending-amount">+$238,000.00</td>
+                            <td><span class="status-badge pending">PENDING</span></td>
+                            <td>$293,715.18</td>
+                        </tr>
+
+                        <!-- March 12, 2026 - Wire transfer payment from Outlandish Endeavors Professional LLC - $51,000 - PENDING -->
+                        <tr class="transaction-row" data-date="2026-03-12" data-status="pending">
+                            <td>Mar 12, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Outlandish Endeavors Professional LLC</span>
+                            </td>
+                            <td class="positive pending-amount">+$51,000.00</td>
+                            <td><span class="status-badge pending">PENDING</span></td>
+                            <td>$55,715.18</td>
+                        </tr>
+
+                        <!-- March 4, 2026 - Monthly service charges - $15 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-03-04" data-status="completed">
+                            <td>Mar 4, 2026</td>
+                            <td>
+                                <strong>Monthly Service Charges</strong><br>
+                                <span class="transaction-detail">Business Checking Account Fee</span>
+                            </td>
+                            <td class="negative">-$15.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$4,715.18</td>
+                        </tr>
+
+                        <!-- February 17, 2026 - Wire transfer to On Demand Trading - $72,580 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-02-17" data-status="completed">
+                            <td>Feb 17, 2026</td>
+                            <td>
+                                <strong>Wire Transfer</strong><br>
+                                <span class="transaction-detail">To: On Demand Trading</span>
+                            </td>
+                            <td class="negative">-$72,580.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$4,730.18</td>
+                        </tr>
+
+                        <!-- February 13, 2026 - Wire transfer payment from Outlandish Endeavors Professional LLC - $64,000 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-02-13" data-status="completed">
+                            <td>Feb 13, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Outlandish Endeavors Professional LLC</span>
+                            </td>
+                            <td class="positive">+$64,000.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$77,310.18</td>
+                        </tr>
+
+                        <!-- February 13, 2026 - Wire transfer payment from Outlandish Endeavors Professional LLC - $10,000 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-02-13" data-status="completed">
+                            <td>Feb 13, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Outlandish Endeavors Professional LLC</span>
+                            </td>
+                            <td class="positive">+$10,000.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$13,310.18</td>
+                        </tr>
+
+                        <!-- February 6, 2026 - Monthly service charges - $15 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-02-06" data-status="completed">
+                            <td>Feb 6, 2026</td>
+                            <td>
+                                <strong>Monthly Service Charges</strong><br>
+                                <span class="transaction-detail">Business Checking Account Fee</span>
+                            </td>
+                            <td class="negative">-$15.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$3,310.18</td>
+                        </tr>
+
+                        <!-- January 22, 2026 - Wire transfer to ODT - $380,000 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-22" data-status="completed">
+                            <td>Jan 22, 2026</td>
+                            <td>
+                                <strong>Wire Transfer</strong><br>
+                                <span class="transaction-detail">To: ODT (On Demand Trading)</span>
+                            </td>
+                            <td class="negative">-$380,000.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$3,325.18</td>
+                        </tr>
+
+                        <!-- January 21, 2026 - Wire transfer payment from Bosta Roofing LLC - $126,000 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-21" data-status="completed">
+                            <td>Jan 21, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Bosta Roofing LLC</span>
+                            </td>
+                            <td class="positive">+$126,000.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$383,325.18</td>
+                        </tr>
+
+                        <!-- January 20, 2026 - Wire transfer payment from Bosta Roofing LLC - $61,500 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-20" data-status="completed">
+                            <td>Jan 20, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Bosta Roofing LLC</span>
+                            </td>
+                            <td class="positive">+$61,500.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$257,325.18</td>
+                        </tr>
+
+                        <!-- January 20, 2026 - Wire transfer payment from Bosta Roofing LLC - $194,000 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-20" data-status="completed">
+                            <td>Jan 20, 2026</td>
+                            <td>
+                                <strong>Wire Transfer Payment</strong><br>
+                                <span class="transaction-detail">From: Bosta Roofing LLC</span>
+                            </td>
+                            <td class="positive">+$194,000.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$195,825.18</td>
+                        </tr>
+
+                        <!-- January 16, 2026 - ATM cash withdrawal - $300 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-16" data-status="completed">
+                            <td>Jan 16, 2026</td>
+                            <td>
+                                <strong>ATM Cash Withdrawal</strong><br>
+                                <span class="transaction-detail">ATM #4521 • Location: Irwindale, CA</span>
+                            </td>
+                            <td class="negative">-$300.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$1,825.18</td>
+                        </tr>
+
+                        <!-- January 12, 2026 - Instant payment debit - $1,800 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-12" data-status="completed">
+                            <td>Jan 12, 2026</td>
+                            <td>
+                                <strong>Instant Payment Debit</strong><br>
+                                <span class="transaction-detail">Real-time payment transfer</span>
+                            </td>
+                            <td class="negative">-$1,800.00</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$2,125.18</td>
+                        </tr>
+
+                        <!-- January 9, 2026 - Debit card purchase - $38.16 - COMPLETED -->
+                        <tr class="transaction-row" data-date="2026-01-09" data-status="completed">
+                            <td>Jan 9, 2026</td>
+                            <td>
+                                <strong>Debit Card Purchase</strong><br>
+                                <span class="transaction-detail">POS Purchase - OFFICE DEPOT #2156</span>
+                            </td>
+                            <td class="negative">-$38.16</td>
+                            <td><span class="status-badge completed">COMPLETED</span></td>
+                            <td>$3,925.18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-outline" disabled>← Previous</button>
+                <span>Page 1 of 1</span>
+                <button class="btn btn-outline" disabled>Next →</button>
+            </div>
+
+            <!-- Pending Transactions Summary -->
+            <div class="pending-summary" id="pendingSummary">
+                <h3>Pending Transactions</h3>
+                <div class="pending-alert">
+                    <span class="alert-icon-large">⏳</span>
+                    <div class="pending-details">
+                        <p><strong>2 wire transfers pending</strong></p>
+                        <p>Total pending credits: <span class="pending-total">+$289,000.00</span></p>
+                        <p class="pending-note">Available balance will update once wires clear (typically 1-2 business days)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Rize Credit Union | Routing #322280032</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+        // Filter functionality
+        document.getElementById('dateFilter').addEventListener('change', filterTransactions);
+        document.getElementById('statusFilter').addEventListener('change', filterTransactions);
+
+        function filterTransactions() {
+            const dateFilter = document.getElementById('dateFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            const rows = document.querySelectorAll('.transaction-row');
+
+            rows.forEach(row => {
+                const date = row.dataset.date;
+                const status = row.dataset.status;
+                let show = true;
+
+                // Date filtering
+                if (dateFilter === 'march' && !date.startsWith('2026-03')) show = false;
+                if (dateFilter === 'february' && !date.startsWith('2026-02')) show = false;
+                if (dateFilter === 'january' && !date.startsWith('2026-01')) show = false;
+
+                // Status filtering
+                if (statusFilter !== 'all' && status !== statusFilter) show = false;
+
+                row.style.display = show ? '' : 'none';
+            });
+        }
+
+        // Format amounts on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.positive, .negative').forEach(el => {
+                const text = el.textContent;
+                const amount = parseFloat(text.replace(/[^0-9.-]+/g,""));
+                if (!isNaN(amount)) {
+                    const formatted = (amount >= 0 ? '+' : '-') + '$' + Math.abs(amount).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                    el.textContent = formatted;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
