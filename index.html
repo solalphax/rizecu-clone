@@ -27,32 +27,41 @@
     </div>
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <!-- Top Notice Bar - yellow alert style from original -->
+<div class="bg-yellow-50 border-b border-yellow-200 py-3 text-center text-sm md:text-base font-medium text-yellow-800">
+  <span class="inline-flex items-center">
+    <span class="mr-2 font-bold">⚠️ Shutdown Relief:</span> We're here to help. 
+    <a href="#" class="ml-1 underline hover:text-yellow-900">Learn more</a>
+  </span>
+</div>
+
+<!-- Main Header / Nav Bar -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
   <div class="container mx-auto px-4 md:px-6 flex items-center justify-between h-16 md:h-20">
-    <!-- Logo - matches original placement & style -->
-    <a href="/" class="flex items-center space-x-3 md:space-x-4">
-      <!-- Graphic R icon (SVG placeholder - replace src if you have real image) -->
-      <svg class="h-9 w-9 md:h-11 md:w-11 flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="#9f2b7f" opacity="0.95"/>
-        <text x="50" y="70" font-family="Roboto, sans-serif" font-size="80" font-weight="900" fill="white" text-anchor="middle" dy=".3em">R</text>
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-3">
+      <!-- Purple-red circle R icon -->
+      <svg class="h-10 w-10 md:h-12 md:w-12 flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="#9f2b7f" />
+        <text x="50" y="70" font-family="'Roboto', sans-serif" font-size="78" font-weight="900" fill="white" text-anchor="middle" dy=".35em">R</text>
       </svg>
       <span class="text-xl md:text-2xl font-bold text-[#003366] tracking-tight">Rize Credit Union</span>
     </a>
 
-    <!-- Navigation (desktop) -->
-    <nav class="hidden md:flex items-center space-x-8 text-[#003366] font-medium">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#003366] font-medium">
       <a href="/" class="hover:text-[#9f2b7f] transition">Home</a>
       <a href="/personal-loans" class="hover:text-[#9f2b7f] transition">Personal Loans</a>
       <a href="/checking" class="hover:text-[#9f2b7f] transition">Checking</a>
-      <!-- Add more: Savings, Digital Banking, About Us, Contact -->
-      <a href="#" class="hover:text-[#9f2b7f] transition font-semibold">Log In</a>
+      <!-- Add more links here -->
+      <a href="#" class="hover:text-[#9f2b7f] transition">Log In</a>
       <a href="/open-account" class="bg-[#9f2b7f] text-white px-6 py-3 rounded-lg hover:bg-[#b83d96] transition">
         Open an Account
       </a>
     </nav>
 
-    <!-- Mobile hamburger -->
-    <button class="md:hidden text-[#003366]">
+    <!-- Mobile Hamburger -->
+    <button class="md:hidden text-[#003366] focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -61,21 +70,16 @@
 </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Beyond Banking.<br>Together We Rize.</h1>
-                <p class="hero-subtitle">Empowering your financial future with personalized solutions, exceptional rates, and a community that puts you first.</p>
-                <div class="hero-cta">
-                    <a href="#" class="btn btn-primary btn-lg open-account-btn">Open an Account</a>
-                    <a href="personal-loans.html" class="btn btn-outline btn-lg">Explore Loans</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400/003366/FFFFFF?text=Financial+Freedom" alt="Financial Freedom">
-            </div>
-        </div>
-    </section>
+    <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-white text-center">
+  <div class="container mx-auto px-4 md:px-6">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003366] leading-tight mb-6 md:mb-10">
+      YOU ARE MOST IMPORTANT TO US
+    </h1>
+    <p class="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+      Our mission is to empower you to reach lasting financial security by providing you with knowledge, access, and care.
+    </p>
+  </div>
+</section>
 
     <!-- APY Promo Section -->
     <section class="apy-promo">
