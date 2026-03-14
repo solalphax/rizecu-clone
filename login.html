@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="login-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                    <a href="#" class="chat-link">Live Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking Accounts</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="#">Digital Banking</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="login.html" class="btn btn-outline active">Log In</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-box">
+                    <h1>Online Banking Login</h1>
+                    <p class="login-subtitle">Access your business account securely</p>
+                    
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">Log In</button>
+                        
+                        <div class="login-divider">
+                            <span>or</span>
+                        </div>
+                        
+                        <a href="#" class="btn btn-outline btn-full open-account-btn">Enroll in Online Banking</a>
+                    </form>
+                    
+                    <div class="login-help">
+                        <p>Need help? <a href="contact-us.html">Contact us</a> or call <a href="tel:8008666474">800.866.6474</a></p>
+                    </div>
+                    
+                    <div class="demo-credentials">
+                        <p><strong>Demo Credentials:</strong></p>
+                        <p>Username: <code>adienne</code></p>
+                        <p>Password: <code>dawn2026</code></p>
+                    </div>
+                </div>
+                
+                <div class="login-features">
+                    <h3>Business Account Features</h3>
+                    <ul>
+                        <li>📊 View account balances & transactions</li>
+                        <li>💸 Transfer funds between accounts</li>
+                        <li>📱 Mobile check deposit</li>
+                        <li>📄 Download statements & tax documents</li>
+                        <li>🔒 Enhanced security with 2FA</li>
+                        <li>👥 Manage authorized users</li>
+                    </ul>
+                    <div class="feature-image">
+                        <img src="https://via.placeholder.com/400x300/003366/FFFFFF?text=Business+Banking" alt="Business Banking">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Accounts</h4>
+                    <ul>
+                        <li><a href="checking.html">Checking</a></li>
+                        <li><a href="rize-checking.html">Rize™ Checking</a></li>
+                        <li><a href="#">Savings</a></li>
+                        <li><a href="business-checking.html">Business Checking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Loans</h4>
+                    <ul>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li><a href="auto-loans.html">Auto Loans</a></li>
+                        <li><a href="mortgage-loans.html">Mortgage Loans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="fees-charges.html">Fees & Charges</a></li>
+                        <li><a href="deposit-rates.html">Deposit Rates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li>📍 12701 Schabarum Ave<br>Irwindale, CA 91706</li>
+                        <li>📞 <a href="tel:8008666474">800.866.6474</a></li>
+                    </ul>
+                    <div class="routing-number">
+                        <strong>Routing #:</strong> 322280032
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Rize Credit Union. All rights reserved. | <a href="#">Privacy Policy</a></p>
+                <div class="ncua-badge">
+                    <span>NCUA Insured</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+        // Login form handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'adienne' && password === 'dawn2026') {
+                localStorage.setItem('rizeLoggedIn', 'true');
+                localStorage.setItem('rizeUser', 'Adienne Dawn LLC');
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Invalid credentials. Try: adienne / dawn2026');
+            }
+        });
+    </script>
+</body>
+</html>
