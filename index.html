@@ -27,59 +27,66 @@
     </div>
 
     <!-- Header -->
-    <!-- Top Notice Bar - yellow alert style from original -->
-<div class="bg-yellow-50 border-b border-yellow-200 py-3 text-center text-sm md:text-base font-medium text-yellow-800">
-  <span class="inline-flex items-center">
-    <span class="mr-2 font-bold">⚠️ Shutdown Relief:</span> We're here to help. 
-    <a href="#" class="ml-1 underline hover:text-yellow-900">Learn more</a>
-  </span>
-</div>
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-<!-- Main Header / Nav Bar -->
-<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-  <div class="container mx-auto px-4 md:px-6 flex items-center justify-between h-16 md:h-20">
-    <!-- Logo -->
-    <a href="/" class="flex items-center space-x-3">
-      <!-- Purple-red circle R icon -->
-      <svg class="h-10 w-10 md:h-12 md:w-12 flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="45" fill="#9f2b7f" />
-        <text x="50" y="70" font-family="'Roboto', sans-serif" font-size="78" font-weight="900" fill="white" text-anchor="middle" dy=".35em">R</text>
-      </svg>
-      <span class="text-xl md:text-2xl font-bold text-[#003366] tracking-tight">Rize Credit Union</span>
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#003366] font-medium">
-      <a href="/" class="hover:text-[#9f2b7f] transition">Home</a>
-      <a href="/personal-loans" class="hover:text-[#9f2b7f] transition">Personal Loans</a>
-      <a href="/checking" class="hover:text-[#9f2b7f] transition">Checking</a>
-      <!-- Add more links here -->
-      <a href="#" class="hover:text-[#9f2b7f] transition">Log In</a>
-      <a href="/open-account" class="bg-[#9f2b7f] text-white px-6 py-3 rounded-lg hover:bg-[#b83d96] transition">
-        Open an Account
-      </a>
-    </nav>
-
-    <!-- Mobile Hamburger -->
-    <button class="md:hidden text-[#003366] focus:outline-none">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-</header>
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking Accounts</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="#">Digital Banking</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                        <div class="user-info hidden" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="pt-24 md:pt-32 pb-16 md:pb-24 bg-white text-center">
-  <div class="container mx-auto px-4 md:px-6">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003366] leading-tight mb-6 md:mb-10">
-      YOU ARE MOST IMPORTANT TO US
-    </h1>
-    <p class="text-lg md:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-      Our mission is to empower you to reach lasting financial security by providing you with knowledge, access, and care.
-    </p>
-  </div>
-</section>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Beyond Banking.<br>Together We Rize.</h1>
+                <p class="hero-subtitle">Empowering your financial future with personalized solutions, exceptional rates, and a community that puts you first.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-lg open-account-btn">Open an Account</a>
+                    <a href="personal-loans.html" class="btn btn-outline btn-lg">Explore Loans</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400/003366/FFFFFF?text=Financial+Freedom" alt="Financial Freedom">
+            </div>
+        </div>
+    </section>
 
     <!-- APY Promo Section -->
     <section class="apy-promo">
