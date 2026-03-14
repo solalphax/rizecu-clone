@@ -27,49 +27,38 @@
     </div>
 
     <!-- Header -->
-    <header class="main-header" id="mainHeader">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
-                    <span class="logo-tagline">Credit Union</span>
-                </a>
-                
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <div class="container mx-auto px-4 md:px-6 flex items-center justify-between h-16 md:h-20">
+    <!-- Logo - matches original placement & style -->
+    <a href="/" class="flex items-center space-x-3 md:space-x-4">
+      <!-- Graphic R icon (SVG placeholder - replace src if you have real image) -->
+      <svg class="h-9 w-9 md:h-11 md:w-11 flex-shrink-0" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#9f2b7f" opacity="0.95"/>
+        <text x="50" y="70" font-family="Roboto, sans-serif" font-size="80" font-weight="900" fill="white" text-anchor="middle" dy=".3em">R</text>
+      </svg>
+      <span class="text-xl md:text-2xl font-bold text-[#003366] tracking-tight">Rize Credit Union</span>
+    </a>
 
-                <nav class="main-nav" id="mainNav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="personal-loans.html">Personal Loans</a></li>
-                        <li class="has-dropdown">
-                            <a href="checking.html">Checking ▾</a>
-                            <ul class="dropdown">
-                                <li><a href="checking.html">All Checking Accounts</a></li>
-                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
-                                <li><a href="business-checking.html">Business Checking</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="deposit-rates.html">Savings</a></li>
-                        <li><a href="#">Digital Banking</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                    </ul>
-                    <div class="nav-cta">
-                        <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
-                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
-                        <div class="user-info hidden" id="userInfo">
-                            <span class="user-name">Adienne Dawn LLC</span>
-                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- Navigation (desktop) -->
+    <nav class="hidden md:flex items-center space-x-8 text-[#003366] font-medium">
+      <a href="/" class="hover:text-[#9f2b7f] transition">Home</a>
+      <a href="/personal-loans" class="hover:text-[#9f2b7f] transition">Personal Loans</a>
+      <a href="/checking" class="hover:text-[#9f2b7f] transition">Checking</a>
+      <!-- Add more: Savings, Digital Banking, About Us, Contact -->
+      <a href="#" class="hover:text-[#9f2b7f] transition font-semibold">Log In</a>
+      <a href="/open-account" class="bg-[#9f2b7f] text-white px-6 py-3 rounded-lg hover:bg-[#b83d96] transition">
+        Open an Account
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="md:hidden text-[#003366]">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
