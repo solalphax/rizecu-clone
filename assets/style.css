@@ -3728,4 +3728,89 @@ textarea:focus {
     }
 }
 
-/* End of CSS */
+/* ============================================= */
+/* MOBILE DASHBOARD FIX - Stack columns vertically on phones */
+/* Add this at the BOTTOM of style.css */
+/* ============================================= */
+
+@media (max-width: 991px) {
+    /* Target the main dashboard wrapper - adjust class if needed */
+    .dashboard-grid,
+    .dashboard-container,
+    .main-content,
+    .row,
+    .flex-container,
+    [class*="flex-row"],
+    [class*="grid"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.25rem !important;
+        padding: 1rem !important;
+    }
+
+    /* Make both main sections full-width */
+    .account-summary,
+    .recent-transactions,
+    .messages-section,
+    .quick-actions,
+    .sidebar,
+    [class*="summary"],
+    [class*="actions"],
+    [class*="transactions"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Better spacing for transaction/message cards */
+    .transaction-item,
+    .message-card,
+    .transaction-list > div,
+    .message-list > div {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1.2rem !important;
+        margin-bottom: 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* Fix long amounts wrapping */
+    .amount,
+    .balance-amount,
+    .transaction-amount {
+        word-break: break-word !important;
+        font-size: 1.05rem !important;
+        text-align: left !important;
+    }
+
+    /* Quick Actions - 2-column grid on phones, larger touch targets */
+    .quick-actions,
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .quick-actions button,
+    .quick-actions a,
+    .action-btn {
+        padding: 1.2rem 0.8rem !important;
+        font-size: 0.95rem !important;
+        min-height: 90px !important;
+        border-radius: 12px !important;
+    }
+
+    /* No horizontal scroll ever */
+    html, body, .container, .dashboard-page {
+        overflow-x: hidden !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Extra for very small iPhones (e.g. SE, older models) */
+@media (max-width: 380px) {
+    .quick-actions {
+        grid-template-columns: 1fr !important; /* single column if too tight */
+    }
+}
