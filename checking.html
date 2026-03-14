@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Checking Accounts - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                    <a href="#" class="chat-link">Live Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html" class="active">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking Accounts</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="#">Digital Banking</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                        <div class="user-info hidden" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header-section">
+        <div class="container">
+            <h1>Checking Accounts</h1>
+            <p>Find the perfect checking account for your lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Checking Options -->
+    <section class="checking-options">
+        <div class="container">
+            <div class="checking-grid">
+                <!-- Rize Checking -->
+                <div class="checking-card featured">
+                    <div class="featured-badge">Best Value</div>
+                    <h2>Rize™ Checking</h2>
+                    <div class="apy-display">7.50% <span>APY</span></div>
+                    <p class="checking-description">Earn high yields on your checking balance up to $10,000.</p>
+                    <ul class="checking-features">
+                        <li>7.50% APY on balances ≤$10,000</li>
+                        <li>0.05% APY on balances >$10,000</li>
+                        <li>5 debit purchases required monthly</li>
+                        <li>eStatements enrollment required</li>
+                        <li>No monthly fees</li>
+                        <li>Free online & mobile banking</li>
+                    </ul>
+                    <a href="rize-checking.html" class="btn btn-primary">Learn More</a>
+                    <a href="#" class="btn btn-outline open-account-btn">Open Account</a>
+                </div>
+
+                <!-- Free Checking -->
+                <div class="checking-card">
+                    <h2>Free Checking</h2>
+                    <div class="apy-display">0.00% <span>APY</span></div>
+                    <p class="checking-description">Simple, straightforward checking with no surprises.</p>
+                    <ul class="checking-features">
+                        <li>No minimum balance</li>
+                        <li>No monthly service fees</li>
+                        <li>Free debit card</li>
+                        <li>Free online banking & bill pay</li>
+                        <li>Mobile check deposit</li>
+                        <li>Overdraft protection available</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline open-account-btn">Open Account</a>
+                </div>
+
+                <!-- Business Checking -->
+                <div class="checking-card">
+                    <h2>Business Checking</h2>
+                    <div class="apy-display">0.10% <span>APY</span></div>
+                    <p class="checking-description">Designed for small businesses and LLCs.</p>
+                    <ul class="checking-features">
+                        <li>No monthly fee with $1,500 balance</li>
+                        <li>200 free transactions/month</li>
+                        <li>Free online business banking</li>
+                        <li>Merchant services available</li>
+                        <li>Business debit cards</li>
+                        <li>Payroll integration</li>
+                    </ul>
+                    <a href="business-checking.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2>Compare Checking Accounts</h2>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Rize™ Checking</th>
+                            <th>Free Checking</th>
+                            <th>Business Checking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Fee</td>
+                            <td>$0 (with eStatements)</td>
+                            <td>$0</td>
+                            <td>$0 (w/ $1,500 min)</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Opening Deposit</td>
+                            <td>$0</td>
+                            <td>$0</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>APY</td>
+                            <td class="highlight">Up to 7.50%</td>
+                            <td>0.00%</td>
+                            <td>0.10%</td>
+                        </tr>
+                        <tr>
+                            <td>Debit Card</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                        </tr>
+                        <tr>
+                            <td>Online Banking</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Check Deposit</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Bill Pay</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                            <td>✓ Free</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Accounts</h4>
+                    <ul>
+                        <li><a href="checking.html">Checking</a></li>
+                        <li><a href="rize-checking.html">Rize™ Checking</a></li>
+                        <li><a href="business-checking.html">Business Checking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Loans</h4>
+                    <ul>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li><a href="auto-loans.html">Auto Loans</a></li>
+                        <li><a href="mortgage-loans.html">Mortgage Loans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="fees-charges.html">Fees & Charges</a></li>
+                        <li><a href="deposit-rates.html">Deposit Rates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li>📍 12701 Schabarum Ave<br>Irwindale, CA 91706</li>
+                        <li>📞 <a href="tel:8008666474">800.866.6474</a></li>
+                    </ul>
+                    <div class="routing-number">
+                        <strong>Routing #:</strong> 322280032
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Rize Credit Union. All rights reserved.</p>
+                <div class="ncua-badge">
+                    <span>NCUA Insured</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
