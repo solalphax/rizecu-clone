@@ -1,10 +1,195 @@
-                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact Us - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                    <a href="#" class="chat-link">Live Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking Accounts</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="contact-us.html" class="active">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                        <div class="user-info hidden" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header-section contact-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h2>Get in Touch</h2>
+                    
+                    <div class="contact-method">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:8008666474">800.866.6474</a></p>
+                        <p class="hours">Mon-Fri: 7am-7pm PT<br>Sat: 8am-5pm PT</p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:info@rizecu.com">info@rizecu.com</a></p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>💬 Live Chat</h3>
+                        <p>Available during business hours</p>
+                        <a href="#" class="btn btn-sm btn-outline" onclick="alert('Live chat simulated - not available in prototype')">Start Chat</a>
+                    </div>
+
+                    <div class="contact-method">
+                        <h3>📍 Main Branch</h3>
+                        <address>
+                            12701 Schabarum Ave<br>
+                            Irwindale, CA 91706
+                        </address>
+                        <a href="locations.html" class="btn btn-sm btn-outline">View All Locations</a>
+                    </div>
+
+                    <div class="routing-info">
+                        <strong>Routing Number:</strong> 322280032
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <h2>Send us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topic">Topic *</label>
+                            <select id="topic" name="topic" required>
+                                <option value="">Select a topic</option>
+                                <option value="account">Account Questions</option>
+                                <option value="loan">Loan Application</option>
+                                <option value="card">Credit/Debit Card</option>
+                                <option value="online">Online Banking</option>
+                                <option value="business">Business Banking</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">Send Message</button>
                     </form>
+                    
                     <div class="form-success hidden" id="formSuccess">
                         <h3>Thank you!</h3>
                         <p>Your message has been sent. We'll get back to you within 24 hours.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations-preview">
+        <div class="container">
+            <h2>Visit a Branch</h2>
+            <div class="locations-mini">
+                <div class="location-mini-card">
+                    <h3>Main Branch - Irwindale</h3>
+                    <p>12701 Schabarum Ave<br>Irwindale, CA 91706</p>
+                    <p>📞 <a href="tel:6263383228">(626) 338-3228</a></p>
+                    <p>Mon-Fri: 9am-5pm<br>Sat: 9am-1pm</p>
+                </div>
+                <div class="location-mini-card">
+                    <h3>West Covina Branch</h3>
+                    <p>123 E Garvey Ave<br>West Covina, CA 91790</p>
+                    <p>📞 <a href="tel:6263383228">(626) 338-3228</a></p>
+                    <p>Mon-Fri: 9am-5pm<br>Sat: 9am-1pm</p>
+                </div>
+                <div class="location-mini-card">
+                    <h3>Pomona Branch</h3>
+                    <p>456 W Mission Blvd<br>Pomona, CA 91766</p>
+                    <p>📞 <a href="tel:6263383228">(626) 338-3228</a></p>
+                    <p>Mon-Fri: 9am-5pm<br>Sat: 9am-1pm</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="locations.html" class="btn btn-outline">View All Locations</a>
             </div>
         </div>
     </section>
@@ -15,9 +200,9 @@
                 <div class="footer-column">
                     <h4>Contact</h4>
                     <ul class="contact-info">
+                        <li>📍 12701 Schabarum Ave<br>Irwindale, CA 91706</li>
                         <li>📞 <a href="tel:8008666474">800.866.6474</a></li>
                         <li>✉️ <a href="mailto:info@rizecu.com">info@rizecu.com</a></li>
-                        <li>📍 12701 Schabarum Ave<br>Irwindale, CA 91706</li>
                     </ul>
                     <div class="routing-number">
                         <strong>Routing #:</strong> 322280032
@@ -29,11 +214,32 @@
                         <li><a href="faqs.html">FAQs</a></li>
                         <li><a href="locations.html">Locations</a></li>
                         <li><a href="#">Report Fraud</a></li>
+                        <li><a href="fees-charges.html">Fees & Charges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Accounts</h4>
+                    <ul>
+                        <li><a href="checking.html">Checking</a></li>
+                        <li><a href="rize-checking.html">Rize™ Checking</a></li>
+                        <li><a href="business-checking.html">Business Checking</a></li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Loans</h4>
+                    <ul>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li><a href="auto-loans.html">Auto Loans</a></li>
+                        <li><a href="mortgage-loans.html">Mortgage Loans</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Rize Credit Union. All rights reserved.</p>
+                <div class="ncua-badge">
+                    <span>NCUA Insured</span>
+                </div>
             </div>
         </div>
     </footer>
