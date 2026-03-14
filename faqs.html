@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FAQs - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="faqs.html" class="active">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                        <div class="user-info hidden" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header-section faqs-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions</p>
+        </div>
+    </section>
+
+    <section class="faqs-section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="faq-cat-btn active" data-cat="general">General</button>
+                <button class="faq-cat-btn" data-cat="accounts">Accounts</button>
+                <button class="faq-cat-btn" data-cat="loans">Loans</button>
+                <button class="faq-cat-btn" data-cat="digital">Digital Banking</button>
+            </div>
+
+            <div class="faq-list" id="faqList">
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        <span>What is Rize Credit Union?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rize Credit Union is a member-owned, not-for-profit financial cooperative serving members since 1952. We offer a full range of banking services including checking, savings, loans, and credit cards with better rates and fewer fees than traditional banks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general">
+                    <button class="faq-question">
+                        <span>Who can join Rize Credit Union?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Membership is open to anyone who lives, works, worships, or attends school in Los Angeles County, Orange County, or San Bernardino County. Family members of current members are also eligible to join.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="accounts">
+                    <button class="faq-question">
+                        <span>How do I qualify for the 7.50% APY on Rize™ Checking?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To earn 7.50% APY on balances up to $10,000, you must: 1) Make at least 5 debit card purchase transactions per statement cycle, 2) Be enrolled in eStatements, and 3) Open the account online. If requirements aren't met, you'll earn 0.05% APY on your entire balance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="accounts">
+                    <button class="faq-question">
+                        <span>What is the minimum deposit to open an account?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most accounts can be opened with $0. Share certificates (CDs) require a minimum deposit of $500. Business checking requires a $100 minimum opening deposit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="loans">
+                    <button class="faq-question">
+                        <span>How fast can I get approved for a loan?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many loan applications receive approval within minutes during business hours. Auto loans and personal loans can often be funded the same day. Mortgage loans typically take 30-45 days to close.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="loans">
+                    <button class="faq-question">
+                        <span>Can I refinance my auto loan from another lender?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer auto loan refinancing with competitive rates. You may be able to lower your monthly payment, reduce your interest rate, or both. We also offer no payments for 90 days on refinanced auto loans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="digital">
+                    <button class="faq-question">
+                        <span>Is mobile banking free?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our mobile banking app is free to download and use. Standard data rates from your wireless carrier may apply. Features include mobile check deposit, bill pay, transfers, and account alerts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="digital">
+                    <button class="faq-question">
+                        <span>What if I forget my online banking password?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click the "Forgot Password" link on the login page. You'll need your username and access to the email address on file. For security, you'll receive a temporary password via email that must be changed upon first login.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-cta">
+        <div class="container">
+            <h2>Still have questions?</h2>
+            <p>Our member service team is here to help.</p>
+            <a href="contact-us.html" class="btn btn-primary">Contact Us</a>
+            <a href="tel:8008666474" class="btn btn-outline">Call 800.866.6474</a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="#">Lost/Stolen Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li>📞 <a href="tel:8008666474">800.866.6474</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Rize Credit Union. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
