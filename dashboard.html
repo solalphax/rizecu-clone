@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Account Dashboard - Rize Credit Union</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="shutdown-notice">
+                    <span class="alert-icon">⚠️</span>
+                    <span>Shutdown Relief: We're here to help. <a href="#">Learn more</a></span>
+                </div>
+                <div class="top-bar-contact">
+                    <a href="tel:8008666474">800.866.6474</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="personal-loans.html">Personal Loans</a></li>
+                        <li class="has-dropdown">
+                            <a href="checking.html">Checking ▾</a>
+                            <ul class="dropdown">
+                                <li><a href="checking.html">All Checking Accounts</a></li>
+                                <li><a href="rize-checking.html">Rize™ Checking (7.50% APY)</a></li>
+                                <li><a href="business-checking.html">Business Checking</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="deposit-rates.html">Savings</a></li>
+                        <li><a href="#">Digital Banking</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <div class="user-info" id="userInfo">
+                            <span class="user-name" id="dashboardUserName">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome, <span id="accountName">Adienne Dawn LLC</span></h1>
+                <p class="last-login">Last login: March 14, 2026 at 07:42 AM PT</p>
+            </div>
+            
+            <!-- Alert for pending wires -->
+            <div class="dashboard-alert pending-wires-alert">
+                <span class="alert-icon">⏳</span>
+                <div class="alert-content">
+                    <strong>Pending Wire Transfers</strong>
+                    <p>You have 2 incoming wire transfers totaling $289,000.00 pending. Available balance will update once cleared.</p>
+                </div>
+                <a href="transaction-history.html" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Account Summary -->
+                <div class="dashboard-card accounts-summary">
+                    <h2>Account Summary</h2>
+                    <div class="account-list">
+                        <div class="account-item">
+                            <div class="account-info">
+                                <span class="account-type">Business Checking</span>
+                                <span class="account-number">****4521</span>
+                            </div>
+                            <div class="account-balance">
+                                <span class="balance-label">Ledger Balance</span>
+                                <span class="balance-amount" id="ledgerBalanceDisplay">$293,715.18</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Available Balance Highlight -->
+                        <div class="account-item available-balance-item">
+                            <div class="account-info">
+                                <span class="account-type">Available Balance</span>
+                                <span class="account-note">Excludes pending transactions</span>
+                            </div>
+                            <div class="account-balance">
+                                <span class="balance-label">Available Now</span>
+                                <span class="balance-amount highlight" id="availableBalanceDisplay">$4,715.18</span>
+                            </div>
+                        </div>
+
+                        <div class="account-item">
+                            <div class="account-info">
+                                <span class="account-type">Business Savings</span>
+                                <span class="account-number">****8834</span>
+                            </div>
+                            <div class="account-balance">
+                                <span class="balance-label">Available</span>
+                                <span class="balance-amount">$125,000.00</span>
+                            </div>
+                        </div>
+                        <div class="account-item">
+                            <div class="account-info">
+                                <span class="account-type">Rize™ High-Yield</span>
+                                <span class="account-number">****1192</span>
+                            </div>
+                            <div class="account-balance">
+                                <span class="balance-label">Available</span>
+                                <span class="balance-amount highlight">$10,000.00</span>
+                                <span class="apy-badge-small">7.50% APY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-balance">
+                        <span>Total Assets (Ledger)</span>
+                        <strong id="totalAssets">$428,715.18</strong>
+                    </div>
+                    <div class="total-available">
+                        <span>Total Available Now</span>
+                        <strong id="totalAvailable" class="highlight">$139,715.18</strong>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="action-grid">
+                        <a href="transfer.html" class="action-btn">
+                            <span class="action-icon">↔️</span>
+                            <span>Transfer</span>
+                        </a>
+                        <a href="transaction-history.html" class="action-btn">
+                            <span class="action-icon">📋</span>
+                            <span>History</span>
+                        </a>
+                        <a href="#" class="action-btn" onclick="alert('Mobile deposit simulated')">
+                            <span class="action-icon">📱</span>
+                            <span>Deposit</span>
+                        </a>
+                        <a href="#" class="action-btn" onclick="alert('Bill pay simulated')">
+                            <span class="action-icon">💸</span>
+                            <span>Bill Pay</span>
+                        </a>
+                        <a href="#" class="action-btn" onclick="alert('Statements simulated')">
+                            <span class="action-icon">📄</span>
+                            <span>Statements</span>
+                        </a>
+                        <a href="#" class="action-btn" onclick="alert('Settings simulated')">
+                            <span class="action-icon">⚙️</span>
+                            <span>Settings</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions (Updated with your data) -->
+                <div class="dashboard-card recent-transactions">
+                    <h2>Recent Transactions</h2>
+                    <a href="transaction-history.html" class="view-all">View All →</a>
+                    <div class="transaction-list">
+                        <!-- March 12 - Pending Wire -->
+                        <div class="transaction-item pending-transaction">
+                            <div class="transaction-details">
+                                <span class="transaction-name">Wire Transfer Payment - Outlandish Endeavors</span>
+                                <span class="transaction-date">Mar 12, 2026 • PENDING</span>
+                            </div>
+                            <div class="transaction-amount positive pending-amount">+$238,000.00</div>
+                        </div>
+                        
+                        <!-- March 12 - Pending Wire -->
+                        <div class="transaction-item pending-transaction">
+                            <div class="transaction-details">
+                                <span class="transaction-name">Wire Transfer Payment - Outlandish Endeavors</span>
+                                <span class="transaction-date">Mar 12, 2026 • PENDING</span>
+                            </div>
+                            <div class="transaction-amount positive pending-amount">+$51,000.00</div>
+                        </div>
+
+                        <!-- March 4 - Service Charge -->
+                        <div class="transaction-item">
+                            <div class="transaction-details">
+                                <span class="transaction-name">Monthly Service Charges</span>
+                                <span class="transaction-date">Mar 4, 2026</span>
+                            </div>
+                            <div class="transaction-amount negative">-$15.00</div>
+                        </div>
+
+                        <!-- February 17 - Wire to ODT -->
+                        <div class="transaction-item">
+                            <div class="transaction-details">
+                                <span class="transaction-name">Wire Transfer - On Demand Trading</span>
+                                <span class="transaction-date">Feb 17, 2026</span>
+                            </div>
+                            <div class="transaction-amount negative">-$72,580.00</div>
+                        </div>
+
+                        <!-- February 13 - Wire from Outlandish -->
+                        <div class="transaction-item">
+                            <div class="transaction-details">
+                                <span class="transaction-name">Wire Payment - Outlandish Endeavors</span>
+                                <span class="transaction-date">Feb 13, 2026</span>
+                            </div>
+                            <div class="transaction-amount positive">+$64,000.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div class="dashboard-card messages">
+                    <h2>Messages</h2>
+                    <div class="message-list">
+                        <div class="message-item unread">
+                            <span class="message-dot"></span>
+                            <div class="message-content">
+                                <strong>Pending Wire Transfers</strong>
+                                <p>2 incoming wire transfers are pending and will be available within 1-2 business days.</p>
+                                <span class="message-date">Mar 14, 2026</span>
+                            </div>
+                        </div>
+                        <div class="message-item unread">
+                            <span class="message-dot"></span>
+                            <div class="message-content">
+                                <strong>Important: Tax Documents Ready</strong>
+                                <p>Your 2025 tax documents (1099-INT) are now available.</p>
+                                <span class="message-date">Mar 1, 2026</span>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-content">
+                                <strong>Welcome to Rize Business Banking</strong>
+                                <p>Thank you for choosing Rize Credit Union for your business needs.</p>
+                                <span class="message-date">Feb 15, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Rize Credit Union. All rights reserved.</p>
+                <div class="ncua-badge">
+                    <span>NCUA Insured</span>
+                    <p>Routing #322280032</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
