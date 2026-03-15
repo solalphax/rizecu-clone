@@ -3811,6 +3811,14 @@ textarea:focus {
 /* Extra for very small iPhones (e.g. SE, older models) */
 @media (max-width: 380px) {
     .quick-actions {
-        grid-template-columns: 1fr !important; /* single column if too tight */
+        grid-template-columns: 1fr !important; /* single column if too .logo img {
+    height: 18px !important;          /* mobile size – change this number */
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        height: 28px !important;      /* desktop size – change this number */
     }
 }
