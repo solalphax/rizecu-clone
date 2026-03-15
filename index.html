@@ -30,15 +30,9 @@
     <header class="main-header" id="mainHeader">
         <div class="container">
             <div class="header-content">
-                <!-- Updated logo: real image, made small -->
-                <a href="index.html" class="logo flex items-center space-x-2 md:space-x-3">
-                    <img 
-                        src="/assets/rize-logo.png" 
-                        alt="Rize Credit Union Logo" 
-                        class="h-8 md:h-10 w-auto object-contain"
-                    />
-                    <!-- Optional text beside logo - uncomment if you want it -->
-                    <!-- <span class="text-lg md:text-xl font-bold text-[var(--navy)] tracking-tight">Rize Credit Union</span> -->
+                <a href="index.html" class="logo">
+                    <span class="logo-text">RIZE<span class="logo-tm">™</span></span>
+                    <span class="logo-tagline">Credit Union</span>
                 </a>
                 
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
@@ -66,17 +60,186 @@
                     </ul>
                     <div class="nav-cta">
                         <a href="login.html" class="btn btn-outline" id="loginBtn">Log In</a>
-                        <a href="#" class="btn btn-primary open-account-btn">Open an Account</a>
+                        <a href="#" class="btn btn-primary open-account-btn">Open Account</a>
+                        <div class="user-info hidden" id="userInfo">
+                            <span class="user-name">Adienne Dawn LLC</span>
+                            <a href="#" class="btn btn-sm btn-outline" id="logoutBtn">Logout</a>
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- The rest of your code remains EXACTLY the same -->
-    <main class="pt-16 md:pt-20">
-        <!-- Your hero, sections, testimonials, promo, etc. - unchanged -->
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Beyond Banking.<br>Together We Rize.</h1>
+                <p class="hero-subtitle">Empowering your financial future with personalized solutions, exceptional rates, and a community that puts you first.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary btn-lg open-account-btn">Open an Account</a>
+                    <a href="personal-loans.html" class="btn btn-outline btn-lg">Explore Loans</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400/003366/FFFFFF?text=Financial+Freedom" alt="Financial Freedom">
+            </div>
+        </div>
+    </section>
+
+    <!-- APY Promo Section -->
+    <section class="apy-promo">
+        <div class="container">
+            <div class="apy-card">
+                <div class="apy-badge">Limited Time</div>
+                <h2 class="apy-rate">7.50%<span class="apy-unit">APY</span></h2>
+                <p class="apy-description">Rize™ Checking Account</p>
+                <ul class="apy-features">
+                    <li>Up to $10,000 balance</li>
+                    <li>5 debit purchases/month required</li>
+                    <li>eStatements enrollment</li>
+                    <li>No monthly fees</li>
+                </ul>
+                <a href="rize-checking.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathways Section -->
+    <section class="pathways">
+        <div class="container">
+            <h2 class="section-title">Your Pathways to Financial Growth</h2>
+            <div class="pathways-grid">
+                <div class="pathway-card">
+                    <div class="pathway-icon">🚗</div>
+                    <h3>Auto Loans</h3>
+                    <p>Rates as low as 4.74% APR. Get pre-approved and shop with confidence.</p>
+                    <a href="auto-loans.html" class="btn btn-link">Explore Auto Loans →</a>
+                </div>
+                <div class="pathway-card">
+                    <div class="pathway-icon">💰</div>
+                    <h3>Personal Loans</h3>
+                    <p>Personalized rates from 9.00% APR. Flexible terms for your needs.</p>
+                    <a href="personal-loans.html" class="btn btn-link">Explore Personal Loans →</a>
+                </div>
+                <div class="pathway-card">
+                    <div class="pathway-icon">🏠</div>
+                    <h3>Home Equity</h3>
+                    <p>Tap into your home's value. Rates from 6.75% APR.</p>
+                    <a href="#" class="btn btn-link">Explore Home Equity →</a>
+                </div>
+                <div class="pathway-card">
+                    <div class="pathway-icon">💳</div>
+                    <h3>Credit Cards</h3>
+                    <p>Visa® cards with competitive rates and rewards.</p>
+                    <a href="visa.html" class="btn btn-link">Explore Cards →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Members Say</h2>
+            <div class="testimonial-carousel" id="testimonialCarousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"I am very happy with their services and the people have been more than helpful and respectful. Been a member for a long while."</p>
+                        <div class="testimonial-author">
+                            <strong>Shelia T.</strong>
+                            <span>Member since 2018 • 11.6.25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"Love the service at Rize CU. As a former member of SCE Credit Union, I thought the service couldn't be any better but I am happily wrong."</p>
+                        <div class="testimonial-author">
+                            <strong>Deborah K.</strong>
+                            <span>Member since 2020 • 12.17.25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"Everytime I walk into Rize CU, I am greeted by everyone. The cashiers are always smiling and happy to help."</p>
+                        <div class="testimonial-author">
+                            <strong>Linda M.</strong>
+                            <span>Member since 2019 • 12.3.25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"I've been a member since 2018 and I refer my family and friends to RIZE CU. I recently became eligible for an auto loan and it was perfect timing!"</p>
+                        <div class="testimonial-author">
+                            <strong>Kayla R.</strong>
+                            <span>Member since 2018 • 5.2.25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"Top notch customer service and professionalism of the employees is top tier. Everyone is like family to me."</p>
+                        <div class="testimonial-author">
+                            <strong>Brandon J.</strong>
+                            <span>Member since 2021 • 9.20.25</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-arrow prev" id="prevTestimonial">‹</button>
+                <div class="carousel-dots" id="testimonialDots"></div>
+                <button class="carousel-arrow next" id="nextTestimonial">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <p>At Rize Credit Union, everyone is valued and respected. We recognize the inherent worth of each member of our community and treat everyone fairly, with dignity and respect.</p>
+                <p>We empower individuals and families to realize their potential and achieve lasting financial security. Through financial empowerment, we ultimately work toward ending poverty.</p>
+                <a href="#" class="btn btn-primary">Learn Our Story</a>
+            </div>
+            <div class="mission-stats">
+                <div class="stat">
+                    <span class="stat-number">70+</span>
+                    <span class="stat-label">Years Serving Members</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Members Strong</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$500M+</span>
+                    <span class="stat-label">Assets Managed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Rize Beyond Banking?</h2>
+            <p>Join over 50,000 members who trust Rize Credit Union for their financial journey.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary btn-lg open-account-btn">Open Account Today</a>
+                <a href="contact-us.html" class="btn btn-outline btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="main-footer">
