@@ -9,43 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 
-    <!-- === Cloudflare Turnstile (anti-bot) - added only this script === -->
+    <!-- Cloudflare Turnstile (anti-bot) -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
-    <!-- === Cloudflare Turnstile widget - added only this div === -->
-    <!-- Invisible mode - user sees nothing unless bot detected -->
+    <!-- Turnstile widget - Managed mode (normal size) -->
     <div class="cf-turnstile" 
          data-sitekey="0x4AAAAAACrfD6wa9nfuLoAP" 
          data-callback="onTurnstileSuccess"
+         data-error-callback="onTurnstileError"
          data-theme="light"
          data-appearance="always"
-         data-size="invisible"></div>
-    <!-- === Cloudflare Turnstile (anti-bot) - added only this script === -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</head>
-<body>
-    <!-- === Cloudflare Turnstile widget - added only this div === -->
-    <!-- Invisible mode - user sees nothing unless bot detected -->
-    <div class="cf-turnstile" 
-         data-sitekey="YOUR_TURNSTILE_SITE_KEY_HERE" 
-         data-callback="onTurnstileSuccess"
-         data-theme="light"
-         data-appearance="always"
-         data-size="invisible"></div>
+         data-size="normal"></div>
 
-    <!-- === JS to hide content until verified - added only this script === -->
+    <!-- JS to hide content until verified + error handling -->
     <script>
         // Hide everything until human is verified
         document.body.style.display = 'none';
 
         function onTurnstileSuccess(token) {
-            // Human verified → show the full page
+            console.log("Human verified! Token:", token);
             document.body.style.display = 'block';
-            // Optional: remove widget after success
+            // Remove widget after success (clean up)
             const widget = document.querySelector('.cf-turnstile');
             if (widget) widget.remove();
+        }
+
+        function onTurnstileError(errorCode) {
+            console.error("Turnstile error:", errorCode);
+            document.body.innerHTML = '<div style="color:red; text-align:center; padding:50px; font-size:1.2em;">' +
+                                      '<h1>Verification Failed</h1>' +
+                                      '<p>Error: ' + errorCode + '</p>' +
+                                      '<p>Please refresh the page or try again later.</p>' +
+                                      '<p>If the problem continues, contact support.</p>' +
+                                      '</div>';
         }
     </script>
     
