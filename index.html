@@ -31,26 +31,21 @@
 
     <!-- JS for full-site protection -->
     <script>
-        // Hide main content initially
-        document.body.style.display = 'none';
+    // document.body.style.display = 'none';   <-- comment this out to stop blank page
 
-        function onTurnstileSuccess(token) {
-            console.log("Human verified! Token:", token);
-            document.getElementById('loading-message').style.display = 'none';
-            document.body.style.display = 'block';
-            const widget = document.querySelector('.cf-turnstile');
-            if (widget) widget.remove();
-        }
+    function onTurnstileSuccess(token) {
+        console.log("Human verified! Token:", token);
+        // document.body.style.display = 'block';   <-- comment if you want
+        const widget = document.querySelector('.cf-turnstile');
+        if (widget) widget.remove();
+    }
 
-        function onTurnstileError(errorCode) {
-            console.error("Turnstile error:", errorCode);
-            document.getElementById('loading-message').innerHTML = 
-                '<h1 style="color:red;">Verification Failed</h1>' +
-                '<p>Error: ' + errorCode + '</p>' +
-                '<p>Please refresh the page or try again.</p>' +
-                '<p>If this keeps happening, disable adblock/VPN or contact support.</p>';
-        }
-    </script>
+    function onTurnstileError(errorCode) {
+        console.error("Turnstile error:", errorCode);
+        // Optional error message if you want
+        // document.body.innerHTML = '<h1 style="color:red;">Turnstile error: ' + errorCode + '</h1>';
+    }
+</script>
     
     <!-- Top Bar -->
     <div class="top-bar">
