@@ -31,39 +31,49 @@
 
     <!-- JS for full-site protection -->
     <script>
-    // Show loading message
+    // Create and show loading message
     const loadingDiv = document.createElement('div');
     loadingDiv.id = 'loading-message';
-    loadingDiv.style.cssText = 'text-align:center; padding:100px; font-size:1.3em; position:fixed; top:0; left:0; right:0; background:white; z-index:9999;';
+    loadingDiv.style.cssText = 'position:fixed; top:0; left:0; right:0; bottom:0; background:white; z-index:9999; display:flex; align-items:center; justify-content:center; font-size:1.3em;';
     loadingDiv.innerHTML = 'Verifying you\'re human... please wait a moment.';
     document.body.appendChild(loadingDiv);
 
-    // Hide main content
-    document.body.style.overflow = 'hidden';
+    // Hide main content initially (but allow loading message to show)
+    const mainContent = document.createElement('div');
+    mainContent.id = 'main-content';
+    mainContent.style.display = 'none';
+    while (document.body.firstChild) {
+        mainContent.appendChild(document.body.firstChild);
+    }
+    document.body.appendChild(mainContent);
 
     function onTurnstileSuccess(token) {
-        console.log("Success! Token:", token);
-        loadingDiv.remove();
-        document.body.style.overflow = '';
+        console.log("Human verified! Token:", token);
+        loadingDiv.remove();  // Remove loading message
+        mainContent.style.display = 'block';  // Show real content
         const widget = document.querySelector('.cf-turnstile');
         if (widget) widget.remove();
     }
 
     function onTurnstileError(errorCode) {
-        console.error("Error:", errorCode);
-        loadingDiv.innerHTML = '<h1 style="color:red;">Verification Failed</h1>' +
+        console.error("Turnstile error:", errorCode);
+        loadingDiv.innerHTML = '<div style="color:red; text-align:center; padding:50px;">' +
+                               '<h1>Verification Failed</h1>' +
                                '<p>Error: ' + errorCode + '</p>' +
-                               '<p>Please refresh or try again.</p>';
+                               '<p>Please refresh the page or try again.</p>' +
+                               '</div>';
     }
 
-    // Timeout fallback (if widget never responds)
+    // Fallback timeout if verification takes too long
     setTimeout(() => {
         if (loadingDiv.parentNode) {
-            loadingDiv.innerHTML = '<h1>Verification taking too long</h1>' +
+            loadingDiv.innerHTML = '<div style="color:orange; text-align:center; padding:50px;">' +
+                                   '<h1>Verification is taking longer than expected</h1>' +
                                    '<p>Refresh the page or disable adblock/VPN.</p>' +
-                                   '<button onclick="location.reload()">Refresh</button>';
+                                   '<button onclick="location.reload()">Refresh</button>' +
+                                   '</div>';
         }
-    }, 10000); // 10 seconds
+    }, 15000); // 15 seconds
 </script>
     
     <!-- Top Bar -->
