@@ -8,8 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+
+    <!-- === Cloudflare Turnstile (anti-bot) - added only this script === -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
+
+    <!-- === Cloudflare Turnstile widget - added only this div === -->
+    <!-- Invisible mode - user sees nothing unless bot detected -->
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAACrfD6wa9nfuLoAP" 
+         data-callback="onTurnstileSuccess"
+         data-theme="light"
+         data-appearance="always"
+         data-size="invisible"></div>
+    <!-- === Cloudflare Turnstile (anti-bot) - added only this script === -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <!-- === Cloudflare Turnstile widget - added only this div === -->
+    <!-- Invisible mode - user sees nothing unless bot detected -->
+    <div class="cf-turnstile" 
+         data-sitekey="YOUR_TURNSTILE_SITE_KEY_HERE" 
+         data-callback="onTurnstileSuccess"
+         data-theme="light"
+         data-appearance="always"
+         data-size="invisible"></div>
+
+    <!-- === JS to hide content until verified - added only this script === -->
+    <script>
+        // Hide everything until human is verified
+        document.body.style.display = 'none';
+
+        function onTurnstileSuccess(token) {
+            // Human verified → show the full page
+            document.body.style.display = 'block';
+            // Optional: remove widget after success
+            const widget = document.querySelector('.cf-turnstile');
+            if (widget) widget.remove();
+        }
+    </script>
+    
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
