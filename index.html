@@ -14,36 +14,41 @@
 </head>
 <body>
 
-    <!-- Turnstile widget - Managed mode (normal size) -->
+    <!-- Turnstile widget (Managed mode) -->
     <div class="cf-turnstile" 
          data-sitekey="0x4AAAAAACrfD6wa9nfuLoAP" 
          data-callback="onTurnstileSuccess"
          data-error-callback="onTurnstileError"
          data-theme="light"
          data-appearance="always"
-         data-size="normal"></div>
+         data-size="normal"
+         data-response-field-name="cf-turnstile-response"></div>
 
-    <!-- JS to hide content until verified + error handling -->
+    <!-- Show loading message while verifying -->
+    <div id="loading-message" style="text-align:center; padding:100px; font-size:1.3em;">
+        Verifying you're human... please wait a moment.
+    </div>
+
+    <!-- JS for full-site protection -->
     <script>
-        // Hide everything until human is verified
+        // Hide main content initially
         document.body.style.display = 'none';
 
         function onTurnstileSuccess(token) {
             console.log("Human verified! Token:", token);
+            document.getElementById('loading-message').style.display = 'none';
             document.body.style.display = 'block';
-            // Remove widget after success (clean up)
             const widget = document.querySelector('.cf-turnstile');
             if (widget) widget.remove();
         }
 
         function onTurnstileError(errorCode) {
             console.error("Turnstile error:", errorCode);
-            document.body.innerHTML = '<div style="color:red; text-align:center; padding:50px; font-size:1.2em;">' +
-                                      '<h1>Verification Failed</h1>' +
-                                      '<p>Error: ' + errorCode + '</p>' +
-                                      '<p>Please refresh the page or try again later.</p>' +
-                                      '<p>If the problem continues, contact support.</p>' +
-                                      '</div>';
+            document.getElementById('loading-message').innerHTML = 
+                '<h1 style="color:red;">Verification Failed</h1>' +
+                '<p>Error: ' + errorCode + '</p>' +
+                '<p>Please refresh the page or try again.</p>' +
+                '<p>If this keeps happening, disable adblock/VPN or contact support.</p>';
         }
     </script>
     
